@@ -1,5 +1,6 @@
 ﻿using System;
 using MyTime = (int hour, int min, int sec);
+using MyTime2 = (int hour2, int min2, int sec2);
 namespace лаба_4
 {
        
