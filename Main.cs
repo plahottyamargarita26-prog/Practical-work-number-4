@@ -1,9 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MyTime = (int hour, int min, int sec);
+using MyTime2 = (int hour2, int min2, int sec2);
 
 namespace лаба_4
 {
@@ -25,20 +26,40 @@ namespace лаба_4
                         Console.Write("Секунди: ");
                         int sec = int.Parse(Console.ReadLine());
                         MyTime t = (hour, min, sec);
+
+                        Console.WriteLine("Введіть другий час");//тільки для Difference
+                        Console.Write("Години: ");
+                        int hour2 = int.Parse(Console.ReadLine());
+                        Console.Write("Хвилини: ");
+                        int min2 = int.Parse(Console.ReadLine());
+                        Console.Write("Секунди: ");
+                        int sec2 = int.Parse(Console.ReadLine());
+                        MyTime t2 = (hour2, min2, sec2);
+
+                        Console.WriteLine("Різниця в секундах:");
+                        Console.WriteLine(Program.Difference(t, t2));
+
                         Console.WriteLine("Введений час:");
                         Console.WriteLine(Program.MyTimeToString(t));
+
                         Console.WriteLine("Нормалізація:");
                         Console.WriteLine(Program.MyTimeToString(Program.Normalize(t)));
+
                         Console.WriteLine("+1 секунда:");
                         Console.WriteLine(Program.MyTimeToString(Program.AddOneSecond(t)));
+
                         Console.WriteLine("+1 хвилина:");
                         Console.WriteLine(Program.MyTimeToString(Program.AddOneMinute(t)));
+
                         Console.WriteLine("+1 година:");
                         Console.WriteLine(Program.MyTimeToString(Program.AddOneHour(t)));
+
                         Console.WriteLine("+500 секунд:");
                         Console.WriteLine(Program.MyTimeToString(Program.AddSeconds(t, 500)));
+
                         Console.WriteLine("Секунд від початку доби:");
                         Console.WriteLine(Program.ToSecSinceMidnight(t));
+
                         Console.WriteLine("Яка зараз пара:");
                         Console.WriteLine(Program.WhatLesson(t));
                         break;
