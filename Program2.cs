@@ -60,6 +60,7 @@ namespace лаба_4
                     Console.WriteLine($"{students[i].Surname} {students[i].Name} {students[i].LastName}" +
                         $"\nОцінки: \nМатематика: {students[i].Math}\nФізика: {students[i].Physics}" +
                         $"\nІнформатика: {students[i].ComputerScience} \nСтипендія: {students[i].Grant} ");
+                        Console.WriteLine();
                 }
             }
             Console.WriteLine($"Кількість: {count}");
